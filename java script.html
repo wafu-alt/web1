@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script 연습</title>
+    <script type="text/javascript">// type="text/javascript" 최신 자바스크립트는 생략 가능
+         
+         
+         
+
+
+    </script>
+
+    <style>
+        .sp { white-space: pre;}
+    </style>
+</head>
+<body>
+<!-- 정리 조건 1.정의(요약) 2.문법(사용법) 3.인자(문법에 어떤 구성) 4.반환(결과-결과가 두가지 이상 될 수도 있음.) 5.설명 6.예제(예시적인 사용법) -->
+
+    <p>alert(내용); 경고창- 내용 뜸</p>
+    <p>var 변수 설정(html)</p>
+    <p>자바스크립트 - //주석, comment <br>
+    /* 여러줄 */</p>
+    <p>;은 줄바꿈(한줄일때) </p>
+<!-- 수학 -->
+<div>
+    <p>정수 : 1 2 3 4 등<br>
+    실수 : 0~ 1.0 -1.0 등 자바스크립트에서는 1이나 1.1이나 적어주면 알아서 구분해서 입력됨<br>
+    + - / * 로 7/3 , 1+1 , 1+ 1.1, 2+2.3 등 연산 가능<br>
+    Math.pow(3,2) 제곱 9 <br>
+    Math.round(10.6); 반올림, Math.random(); 난수 <br>
+    Math.round(100 * Math.random()); 100~0 사이 나올것</p>
+</div>
+<!-- 문자 -->
+<div> 
+    <p>'내용' "내용"은 같은것. " 내용'은 안 됨<br>
+    '내용+"내용'은 가능, '내용+\'내용'은 가능 \'가 중요함<br>
+    \ escape 탈출 함, 1 =\ "1"은 같지않음 숫자와 문자 차이  typeof 1하면 console에서 가르쳐줌 </p>
+</div>
+<!-- 문자열 숫자열 -->
+<div>
+    <p>\n은 줄바꿈  string.명령어 number or math.명령어는 다르므로 필요할때 찾아서 쓸것<br>
+    데이터 타입은 number, string, boolean(true 숫자1, false 나머지 숫자)</p>
+</div>
+<!-- 변수 -->
+<div>
+    <p>변수(variable) 자바스크립트에서는 var로 사용<br> var a = 1; / var first = 'coding'; first = '코딩'; 앞에서 변수 설정해서 후로는 var 선언안하고 사용 / var b = 'coding' , b = '코딩'; 사용가능<br>
+    왼쪽이 기준이고 오른쪽이 대입하는 값이다 <br>
+    코드의 재활용성을 높여주기 위해 변수를 사용함 => 변하는 영역과 변하지 않는 영역을 나눠서 구분하면 편함
+    </p>
+</div>
+<!-- 연산자 ,비교 -->
+<div>
+    <p>a(변수) =(대입 연산자) 1(값,상수) <br>
+    ==(동등비교연산자). ===(일치 strict 엄격한) . > . < . >= . <= 결과는 true, false 로 값이 나옴 <br>
+    1 === "1" false 데이터 형식이 다름 / 1 == "1" true 결과적으로 같은 값이 되서 참이라고 함 , 전자사용할 것<br>
+    문자열도 비교 가능함 <br>
+    undefined 의도하지 않은 공란, null 고의적인 공란 <br>
+    0/0 = nan 계산할 수 없는 것을 말함</p>
+</div>
+<!-- 조건문 -->
+<div>
+    <p>조건문 - conditional statement <br>
+        if (true) { alert('result : true') } ; if바로 뒤 괄호 갑이 참이기 때문에 실행 <br>
+        if (false) { alert(1); }       else if(true) { alert(2); } else if(true) { alert(3); }    else { alert(4); } <br>
+        else가 가장 마지막에 실행되고 if, else if중에 조건에 맞으면 실행이 됨 <br>
+        if (조건-참과 거짓으로 나뉘는 것이 필요함) <br>
+        prompt('당신의 나이는?'); 사용자로부터 입력을 받을 수있음(팝업창으로) <br>
+        alert(prompt('당신의 나이는?')); 입력받고 그 입력을 팝업창으로 띄워줌 <br>
+        id = prompt('아이디를 입력해주세요.'); <br> 
+        if(id=='egoing'){ <br>
+            password = prompt('비밀번호를 입력해주세요.'); <br>
+            if(password==='111111'){ <br>
+                alert('인증 했습니다.'); <br>
+            } else { <br>
+                alert('인증에 실패 했습니다.'); <br>
+            } <br>
+        } else { <br>
+            alert('인증에 실패 했습니다.'); <br>
+        } <br>
+        논리연산자 &&  = and , || = or (둘중 하나만 참이면 ok) !true = false !=not의미<br>
+        if((id==='egoing' || id==='k8805' || id==='sorialgi') && password==='111111'){
+            alert('인증 했습니다.');
+        } <br>
+        0 , 1 은 관습적으로 false, true로 이해한다.  <br>
+        if('') {} 빈문자열은 false로 간주 <br>
+        <a href="https://dorey.github.io/JavaScript-Equality-Table/">테이블 참조</a>
+    </p>
+    <dl>
+        <dt>반복문 loop, iterate</dt>
+        <dd>while , for</dd>
+        <dd>while (boolean조건) {반복해서 실행할 코드} <br>
+        조건이 false가 될때까지  document.write('내용'); 무언가를 적고 싶을때 <br>
+        반복문은 끝나는 시점을 정해줘야함 아니면 무한반복이 됨 <br>
+        var i = 0; 0에서 숫자 셈<br> 
+        while(i < 10){
+            document.write('coding everybody '<'br /'>'');
+            i++  (i = i + 1 ; =/ ++i; <br> i++는 1을 실행 후 더함 ++i는 1을 더하고 출력해줌 )
+        } <br>   </dd>
+        <dd>for(var i = 0; i < 10; i++){ 초기화정의(제일처음 한번만 실행),~까지,증가요소 순으로 되어있음 끝은 세미콜론x<br>
+            document.write('coding everybody'+i+''<'br /'>'');
+        } +요소는 변수를 글자 사이에 붙여서 쓸수있음</dd>
+        <dd>강제종료, 일시정지 <br>
+        if(i === ?) { break;} break로 중단할 수 있다. 반복문 안에 조건문 혹은 조건문 안에 반복문가능
+        if(i === ?) { continue;} 조건에 만족하면 패스하고 계속 반복문 실행<br>
+        'coding everybody'+i+' body' 일때 i는 원래 숫자지만 문자 사이에 있는 숫자는 문자로 인식해줌 <br>
+        
+        </dd>
+    </dl>
+</div>
+<!-- 함수 -->
+<div>
+    <dl>
+        <dt>함수 function -하나의 로직을 재실행 할 수 있도록 하는 것으로 코드 재사용성을 높여준다.</dt>
+        <dd>funtion 함수명 ([인자...[,인자]]) { <br>
+            코드 <br>
+            return 반환값}</dd>
+        <dd>
+            함수정의 - 함수호출 <br>
+            정의명(); - 함수 / 정의명; - 변수명 <br>
+            재사용성 + 유지보수의 용이 + 가독성 을 높이는 방향으로 발전함 <br>
+        </dd>
+        <dd>
+            입력과 출력 <br>
+            function i () { <br>
+                return '리턴값'; <br>
+            }; <br>
+
+            function i (입력값) { - 매개변수 parameter<br>
+                return '리턴값'; 출력값 <br>
+            }; <br>
+            i (1) ; 1을 입력값으로 함 - 인자<br>
+            <br>
+            function i (a, b)) {};
+
+            
+        </dd>
+
+        <dd>
+            자바스크립트에서는 함수 정리 방법은 아래와 같이 쓸 수도 있다<br>
+            함수명 = function () { <br> 정의 = 함수 (정의에 함수를 대입함)
+                i = 0; <br>
+                while ( i < 10 ){ <br>
+                    document.write(i); <br>
+                    i += 1; <br>
+                } <br>
+            }  <br>
+            은 funtion 함수명 () { <br>
+                i = 0; <br>
+                while ( i < 10 ){ <br>
+                    document.write(i); <br>
+                    i += 1; <br>
+                } <br>
+            } <br>
+            과 같다 = 함수명 ();
+            <br>
+            (funtion () { <br>
+                i = 0; <br>
+                while ( i < 10 ){ <br>
+                    document.write(i); <br>
+                    i += 1; <br>
+                } <br>
+            }) () ; 함수명이 없지만 바로 정의와 호출을 동시에 가능하다 - 익명함수 (1회성) <br>
+        
+
+        </dd>
+    </dl>
+</div>
+<!-- 배열 -->
+<div>
+    <dl>
+        <dt>
+            배열 array - 연관된 데이터를 모아서 통으로 관리하기 위해서 사용하는 데이터 타입 <br>
+            변수가 하나의 데이터를 정하기 위한 것이면 배열은 여러개 데이터를 하나의 변수에 저장하기 위한 것 <br>
+            한통에 여러개 담음 (변수) <br>
+            여러통에 여러개 담음 (배열)
+        </dt>
+        <dd>
+            var member = ['a', 'b', 'c']; <br>
+            member은 a,b,c를 담고 있음 <br>
+            var member1 = 'a'; / var member2 = 'b'; 이렇게 나열 할 필요가 없음 <br>
+            a, b, c 데이터를 원소 element라고 함 <br>
+            원소는 각자 고유 값이 있음 그걸 색인 index라고 부름 <br>
+            index는 정보를 찾는 역할을 함 <br>
+            호출 alert( member[2] ); 하면 c가 나옴 <br>
+        </dd>
+        <dd>
+            배열의 효용 <br>
+            함수는 여러 값을 받지만 출력은 하나만 나옴 <br>
+            배열이 없다면 function member1 () { return 'a'; } <br>
+            function member2 () { return 'b'; } <br>
+            function member3 () { return 'c'; } <br>를 <br>  
+            function mebers () { retrun ('a', 'b', 'c'); } <br>  
+            var call_members = members(); <br> 콜 변수명에 맴버함수를 넣고 <br>  
+            document.write(call_members[0]); <br>
+            document.write(call_members[1]); <br>
+            document.write(call_members[2]); <br> 로 콜할 수 있음
+        </dd>
+        <dd>
+            배열과 반복문의 조우 <br>
+            위처럼 하나씩 출력해도 되지만 반복문을 사용해서 더 편리하게 출력할 수 있다 <br>
+            for(var i= 0; i < 3; i++) { <br>
+                document.write(call_members[i] + "<br>"); <br>
+            } <br> 라고 하면 i가 3 미만으로 출력됨  <br>
+            for(var i= 0; i < call_members.length; i++) { <br>
+                document.write(call_members[i] + "<br>"); <br>
+            } <br> 라고 하면 i가 call_members숫자  미만으로 출력됨 (.length가 원소 갯수를 세준다)  <br>
+
+        </dd>
+
+        <dd class="sp">
+            배열 : 데이터의 추가
+            var li = [ 'a', 'b', 'c' ,'d', 'e'];
+            li.push('f'); => 맨 뒤에 'f'를 추가함 / push는 자바스크립트 내장 함수임
+            li = li.concat ( ['f'. 'g']); => 맨 뒤에 f,g를 추가함 concat은 배열형태를 추가할때 사용
+            li.unshift('z'); => 맨 앞쪽에 z를 추가함
+            
+            중간에 값을 끼워넣기
+            li.splice(index , howmany , '데이터' , '데이터' +.....);
+            예시 li.splice (1,1,'c','d'); =>[ 'a', 'c' ,'d', 'c' ,'d', 'e'] b삭제 후 c,d가 추가 됨
+            예시2 li.splice (1,0,'z'); => [ 'a', 'z' , 'c' ,'d', 'e'] b삭제 후 z가 추가됨
+        </dd>
+        <dd class="sp">
+            배열 : 제거, 정렬
+            제거 li.shift(); 처음제거/ li.pop(); 끝 제거
+            정렬 li.sort(); 알파벳순 내림 / li.reverse(); 역순/
+            어떠한 법칙 순서 li.sort(function); function 에 법칙을 주면 됨
+        </dd>
+        
+    </dl>
+</div>
+<!-- 객체 -->
+<dl class="sp">
+    <dt>객체 object - 배열과 비교됨. index를 문자로 설정할 수 있으면 객체. 숫자로 해야되면 배열 - 연관배열, 맵, 딕셔너리 데이터 타입이 객체에 해당</dt>
+    <dd>
+        var li = ['a' : 10 , 'b' : 6 , 'c' : 80]; / a는 key(색인)이고 10은 값이다
+        var li = {}; / var li = new Object(); 같은 뜻
+        li ['a'] = 10;
+        li ['b'] = 6;
+        li ['c'] = 80; / 으로 객체를 구성 할 수 있음
+        li['a'] => 10 /결과를 냄 단, 'key값은 '문자열'+'문자열'' 이 가능하지만 아래에서는 안됨
+        li.a => 10 /결과를 냄
+    </dd>
+    <dd>
+        객체와 반복문
+        for(var i =0; i < li.length; i++){
+            console.log(li[i]);
+        } => a b c 차례대로 출력함. 그게 가능한 이유는 배열이 순서이고 index값이 숫자이기에 가능함
+        객체는 순서가 없음
+        <script type="text/javascript">
+        var li = {'a':10, 'b':6, 'c':80};
+
+        for ( key in li) {
+            document.write("key : "+key+" value : "+li[key]+" <br>" );
+        }
+         
+        for ( var name in li) {
+            document.write("key : "+name+" value : "+li[name]+" <br>" );
+        }
+        </script>
+    </dd>
+    <dd>
+        <script type="text/javascript">
+            var li = { 
+                'list' : { 'a':10 , 'b':8, 'c':80},
+                'list1' : function() {
+                    document.write('Hello World/');
+                    console.log (this.list); //개발자 도구로 출력하기
+                    for ( var name in this.list){
+                        console.log(name, this.list[name]);
+                    }
+                }
+            }
+            document.write(li['list']['a']); 
+            li['list']['a'];//안 됨
+            document.write(li['list1']());
+            li['list1']();
+            li.list1();
+        </script>
+        위에 것이 가능하면 객체 지향 프로그래밍이라고 함 
+        하나의 그릇안에 그룹을 지어서 할 수 있음
+    </dd>
+</dl>
+<!-- 모듈 -->
+<dl class="sp">
+    <dt>모듈 부품. 작고 단순한것 > 크고 복잡하게 진화함</dt>
+    <dd> script src="">/script 라는 src속성은 모듈화 된것을 불러오는 역할을 한다</dd>
+    <dd>라이브러리 : 모듈과 비슷한 개념, 자주 사용되는 로직을 재사용하기 편하게 잘 정리한 코드들의 집합 - jQuery도 그러함</dd>
+</dl>
+<!-- UI API 문서 -->
+<dl class="sp">
+    <dt>API Application Programming Interface</dt>
+    <dd>
+        https://opentutorials.org/module/532/6533
+        UI : 사용자 의중을 시스템에 전달 해준다 - 하드웨어(키보드,터치 등) 소프트웨어(버튼 등)
+        API : 기반이 되는 시스템을 이용해서 (UI 스크롤 버튼 등등) 프로그램을 만드는 것
+        os 운영체제 - api 프로그램(웹브라우저) - api 프로그램(웹응용프로그램) . 각각 기반or플랫폼이 되어짐
+        물리 - 전기공학 - 전자공학 - 전산,소프트웨어공학(기계어(0,1) - 어셈블리어 - c,c++ -  os 운영개발자 - 윈도우 개발자 - 웹브라우저 - 웹 개발자) - 사용자
+        각 계층간에는 인터페이스를 사용하여 플랫폼이나 시스템에서 프로그램으로 개발함
+    </dd>
+    <dd>
+        레버런스와 튜토리얼 - 레버런스:사전 , 튜토리얼:문법
+        자바스크립트 : 자바스크립트 자체의 명령어:api (날짜,수학적 기본) / 자바스크립트가 동작하는 호스트 환경 api(웹브라우저 노드js)
+        -자바스크립트 api
+        ECMAScript® 2021 language specification : 표준문서 www.ecma-international.org
+        자바스크립트 사전(생활코딩) :https://opentutorials.org/course/50
+        MDN(파이어폭스 - 모질라 재단) : developer.mozilla.org/en-US/docs/Web/JavaScript/Reference
+        마이크로소프트 : https://docs.microsoft.com/ko-kr/previous-versions/visualstudio/visual-studio-2010/z688wt03(v=vs.100)?redirectedfrom=MSDN
+        -호스트 환경 api
+        MDN : https://developer.mozilla.org/en-US/docs/Web/API
+        Node.js : https://nodejs.org/api/
+        구글 앱 스크립트 : https://developers.google.com/apps-script/
+    </dd>
+</dl>
+<!-- 정규표현식 -->   
+<dl class="sp">
+    <dt>정규표현식 regular expression - 자바스크립트 말고도 자바, perl등에서도 사용</dt>
+    <dd>
+        https://opentutorials.org/course/909/5142 : 정규표현식 수업
+    </dd>
+    <dd>
+        컴파일 - 패턴,작업을 위한 행동들
+        실행 - 패턴의 대상에 대한 구체적인 작업
+        1.작업 대상 찾기 2.어떤 작업을 할 것인지 3.대상에 대한 작업을 하는 것
+        정보를 (추출. 존재 확인. 다른 정보로 치환)
+    </dd>
+    <dd>
+        정규표현식 옵션
+
+    </dd>
+</dl>
+<!-- 전역변수, 지역변수 -->
+<dl class="sp">
+    <dt>유효범위 scope . 변수의 수명</dt>
+    <dd>
+    <script type="text/javascript">
+    var vscope = 'global';
+    function fscope(){
+        var vscope = 'local';
+        alert(vscope);
+    }
+    function fscope2(){
+        alert(vscope);
+    }
+    // fscope(); //local 출력하는데 이유는 fscope 내의 가까운 변수를 출력함
+    // fscope2();//global
+
+    var vscope = 'global';
+    function fscope(){
+        var vscope = 'local';
+    }
+    fscope();
+    // alert(vscope); //global 
+
+    var vscope = 'global';
+    function fscope(){
+        vscope = 'local';
+    }
+    fscope();
+    // alert(vscope); //local var은 로컬을 변수를 선언하는 것과 같다
+                //이미 선언되어있는 것을 local로 바꾸는 것과 같기 때문이다
+
+    var vscope = 'global';
+    function fscope(){
+        var vscope = 'local';
+        vscope = 'local';
+    }
+    fscope();
+    // alert(vscope); // global 지역변수 선언에 local을 대입한 것이고 이것은 fscope를 벗어나지 못한다
+    </script>    
+        함수 밖에서 var선언하면 글로벌이고 함수 안에서 var선언하면 지역이 된다.
+        함수 밖에서 지역var써도 그것이 곧 글로벌이기 때문이다.
+    </dd>
+    <dd>
+        유효범위
+        전역과 지역 범위 개념이 없을때에는 서로간의 변수가 충돌 할 수 있기 때문에 이러한 범위가 생겨남
+    </dd>
+    <dd>
+        전역변수
+        var MYAPP = {}
+        MYAPP.calculator = {
+            'left' : null,
+            'right' : null
+        }
+        MYAPP.coordinate = {
+            'left' : null,
+            'right' : null
+        }
+        MYAPP.calculator.left = 10;
+        MYAPP.calculator.right = 20;
+        function sum(){
+            return MYAPP.calculator.left + MYAPP.calculator.right;
+        }
+        document.write(sum());
+        여기서 MYAPP은 전역 변수가 된다
+
+        (function(){
+            var MYAPP = {}
+            MYAPP.calculator = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.coordinate = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.calculator.left = 10;
+            MYAPP.calculator.right = 20;
+            function sum(){
+                return MYAPP.calculator.left + MYAPP.calculator.right;
+            }
+            document.write(sum());
+        }())
+        MYAPP은 함수안은 지역변수인데 익명함수가 되어서 MYAPP은 전역에서 없는 변수가 된다.
+
+        function myappfn(){
+            var MYAPP = {}
+            MYAPP.calculator = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.coordinate = {
+                'left' : null,
+                'right' : null
+            }
+            MYAPP.calculator.left = 10;
+            MYAPP.calculator.right = 20;
+            function sum(){
+                return MYAPP.calculator.left + MYAPP.calculator.right;
+            }
+            document.write(sum());
+        }
+        myappfn();
+        이면 myappfn이 전역 변수가 되므로 이렇게도 안 쓰고싶으면 익명함수를 사용한다.
+    </dd>
+    <dd>
+        for(var i = 0; i < 1; i++){
+            var name = 'coding everybody'
+        }
+        alert(name); 
+        하면 name이라는 변수는 { }안에서 지역변수가 아니라 coding everybody를 출력한다
+        그러나
+
+        function (){
+            var name = 'coding everybody'
+        }
+        alert(name);
+        이면 함수 안의 { }에서 변수 선언이기 때문에 지역변수로 보고 출력에 에러가 난다.
+
+        그외에도 for , if문의 { }은 변수 선언이 지역변수가 아니게 된다.
+    </dd>
+    <dd>
+        
+    </dd>
+</dl>
+
+
+</body>
+</html>
