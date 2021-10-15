@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크롤 테스트</title>
+
+    <style>
+        .blank { background: aquamarine; height: 500px; width: 100%;}
+    </style>
+</head>
+<body>
+    <!-- a tag에 따른 이동 -->
+    <!-- anchor 방식 <a href="#target">클릭시 traget으로 이동</a>
+    <div id="target"></div>
+    <div name="target"></div> -->
+
+    <a href="#target">클릭시 target으로 이동</a>
+
+    <div class="blank"></div>
+    <!-- <div id="target">id is target</div> -->
+    <div class="blank"></div>
+    <a name="target">a tag name is target</a>
+    <div class="blank"></div>
+    
+    <a href="javascript:window.scrollTo(0,750);">세로 750px 내려감(맨 위에서)</a>
+    <a href="javascript:window.scrollBy(0,750);">세로 750px 내려감(현재위치에서)</a>
+
+    <div class="blank"></div>
+    <div class="blank" id="position" style="background: blueviolet;"></div>
+    <div class="blank"></div>
+    <script>
+        var winX = window.pageXOffset;
+        var winY = window.pageYOffset;
+        console.log(winX, winY);
+
+        var target = document.getElementById("position");
+
+        var targetTop = target.getBoundingClientRect().top;
+        var targetBottom = target.getBoundingClientRect().bottom;
+        var targetLeft = target.getBoundingClientRect().left;
+        var targetRight = target.getBoundingClientRect().right;
+        console.log(target);
+        console.log(targetTop, targetRight, targetBottom, targetLeft );
+
+        var target = document.getElementById("position");
+
+        var targetTop = target.getBoundingClientRect().top;
+
+        var abTop = window.pageYOffset + target.getBoundingClientRect().top;
+        console.log(targetTop, abTop);
+    </script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+    <pre class="prettyprint">
+        <ol>
+            <li>pre태그가 뭘까?</li>
+            <li>2번째 줄??</li>
+            <li>ol에 li를쓰면?</li>
+        </ol>
+    </pre>
+
+    <code class="prettyprint">
+        <ol>
+            <li>pre태그가 뭘까?</li>
+            <li>2번째 줄??</li>
+            <li>ol에 li를쓰면?</li>
+        </ol>
+    </code>
+
+    <xmp class="prettyprint">
+        <ol>
+            <li>pre태그가 뭘까?</li>
+            <li>2번째 줄??</li>
+            <li>ol에 li를쓰면?</li>
+        </ol>
+    </xmp>
+</body>
+</html>
