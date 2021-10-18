@@ -76,5 +76,43 @@
             <li>ol에 li를쓰면?</li>
         </ol>
     </xmp>
+
+    <label for="input_text">텍스트를 입력해줘 : </label>
+    <input type="text" id="input_text">
+
+    <button type="button"  onclick="getValueInput()"> 
+        입력완료!! 
+    </button> 
+
+    <p id="output_text"></p>
+
+    <script>
+        const getValueInput = () =>{
+            let inputValue = document.getElementById("input_text").value; 
+            document.getElementById("output_text").innerHTML = inputValue; 
+        }
+
+        //화살표 함수
+        //es5
+        var pow = function(x) { return x * x ;};
+        console.log(pow(10)); //100
+        //es6
+        const pow1 = x => x * x;
+        console.log(pow1(10)); //100
+
+        //es5
+        var arr = [1,2,3];
+        var pow = arr.map(function (x) {
+            return x * x;
+        });
+        console.log(pow); //[1, 4, 9]
+        //es6
+        const arr1 = [1,2,3];
+        const pow2 = arr1.map( x => x * x);
+        console.log(pow2); //[1, 4, 9]
+
+
+
+    </script>
 </body>
 </html>
