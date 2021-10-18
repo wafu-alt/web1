@@ -78,7 +78,7 @@
     </xmp>
 
     <label for="input_text">텍스트를 입력해줘 : </label>
-    <input type="text" id="input_text">
+    <input type="text" class="input_text">
 
     <button type="button"  onclick="getValueInput()"> 
         입력완료!! 
@@ -88,9 +88,17 @@
 
     <script>
         const getValueInput = () =>{
-            let inputValue = document.getElementById("input_text").value; 
+            let inputValue = document.getElementsByClassName("input_text")[1].value; 
             document.getElementById("output_text").innerHTML = inputValue; 
         }
+
+
+
+
+
+
+
+
 
         //화살표 함수
         //es5
@@ -111,7 +119,40 @@
         const pow2 = arr1.map( x => x * x);
         console.log(pow2); //[1, 4, 9]
 
+        var a = 'var a test1';
+        console.log(a); // var a test1 
+        var a = 'var a test2';
+        console.log(a); // var a test2 변수 재선언 가능
+        a = 'var a test3' 
+        console.log(a);//var a test3  변수 재할당 가능
+        //
+        a = 'var a test4' 
+        var a; //var a test4 후 변수 선언 가능
 
+        //ES6
+        let b = 'let b test1';
+        console.log(b); // var a test1 
+        let b = 'let b test2';
+        console.log(b); 
+        // Uncaught SyntaxError: Identifier 'b' has already been declared 변수 재선언 불가능
+        b = 'let b test3' 
+        console.log(b);//var a test3  변수 재할당 가능
+
+        b = 'let b test4' 
+        let b; //Uncaught ReferenceError: Cannot access 'b' before initialization 후 변수 선언 불가능
+
+
+        const c = 'const c test1';
+        console.log(c); // const a test1 
+        const c = 'const c test2';
+        console.log(c); 
+        // Uncaught SyntaxError: Identifier 'c' has already been declared  변수 재선언 불가능
+        c = 'const c test3' 
+        console.log(c);
+        //Uncaught TypeError: Assignment to constant variable.  변수 재할당 불가능
+
+        c = 'const c test4' 
+        const c; //Uncaught SyntaxError: Missing initializer in const declaration 후 변수 선언 불가능
 
     </script>
 </body>
