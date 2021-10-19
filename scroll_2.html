@@ -21,13 +21,28 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 
     <script>
+// 마우스 휠의 기능을 막는것        
         window.addEventListener("wheel", function(e){
             e.preventDefault();
-        },{passive : false});
-
+        },{passive : false});//함수의 능동적 감시를 차단
+// y 포지션 0이 아닐경우 대비해서 0으로 해줌
         var mHtml = $("html");
         var page = 1;
         mHtml.animate({scrollTop : 0},10);
+//휠 이벤트 처리
+        $(window).on("wheel", function(e) {
+            if(mHtml.is(":animated")) return;
+            if(e.originalEvent.deltaY > 0) { //.deltaY > 0 휠을 아래로 내리는 모션
+                if(page == 4) return;
+                page++; //증감연산자
+            } else if(e.originalEvent.deltaY < 0) { // 휠을 위로 올라가는 모션
+                if(page == 1) return;
+                page--;
+            }
+            var posTop =(page-1) * $(window).height();// 윈도우높이가 곧 한 섹션의 높이다 (css section height 100%임)
+            mHtml.animate({scrollTop : posTop});
+        })
+
     </script>
 
 </head>
