@@ -39,7 +39,7 @@ input, select, textarea { vertical-align: middle; }
 /* 공통사항 */
 body { font-family: 'Poppins', 'Noto Sans KR', sans-serif; font-size: 100%; line-height: 1.5; color: #000; min-width: 768px;}
 
-#header {  background-color: blanchedalmond; }
+#header {  position: fixed; top: 0; background-color: blanchedalmond; }
 #header .wrap {display: flex; justify-content: space-around; align-items: center; width: 1200px; margin: 0 auto; background-color: brown;}
 #header .wrap .gnb li { float: left;}
 

@@ -10,37 +10,52 @@
 
     <script type="text/javascript">
         window.onload = function(){
-            console.log ( '#header' )
-            console.log ( document.querySelector('#header').offsetHeight )
-            console.log ( document.querySelector('#header').offsetTop )
-            console.log ( document.querySelector('#header').clientHeight )
-            console.log ( document.querySelector('#header').scrollHeight )
-            console.log ( '#sec1' )
-            console.log ( document.querySelector('#sec1').offsetHeight )
-            console.log ( document.querySelector('#sec1').offsetTop )
-            console.log ( document.querySelector('#sec1').clientHeight )
-            console.log ( document.querySelector('#sec1').scrollHeight )
-            console.log ( '#sec2' )
-            console.log ( document.querySelector('#sec2').offsetHeight )
-            console.log ( document.querySelector('#sec2').offsetTop + ' offsetTop')
-            console.log ( document.querySelector('#sec2').clientHeight )
-            console.log ( document.querySelector('#sec2').scrollHeight )
-            console.log ( '#sec3' )
-            console.log ( document.querySelector('#sec3').offsetHeight )
-            console.log ( document.querySelector('#sec3').offsetTop )
-            console.log ( document.querySelector('#sec3').clientHeight )
-            console.log ( document.querySelector('#sec3').scrollHeight )
-            console.log ( '#sec4' )
-            console.log ( document.querySelector('#sec4').offsetHeight )
-            console.log ( document.querySelector('#sec4').offsetTop )
-            console.log ( document.querySelector('#sec4').clientHeight )
-            console.log ( document.querySelector('#sec4').scrollHeight )
-            console.log ( '#sec5' )
-            console.log ( document.querySelector('#sec5').offsetHeight )
-            console.log ( document.querySelector('#sec5').offsetTop )
-            console.log ( document.querySelector('#sec5').clientHeight )
-            console.log ( document.querySelector('#sec5').scrollHeight )
+            // console.log ( '#header' )
+            // console.log ( document.querySelector('#header').offsetHeight )
+            // console.log ( document.querySelector('#header').offsetTop )
+            // console.log ( document.querySelector('#header').clientHeight )
+            // console.log ( document.querySelector('#header').scrollHeight )
+            // console.log ( '#sec1 h200 m0 p0 b0' )
+            // console.log ( document.querySelector('#sec1').offsetHeight )
+            // console.log ( document.querySelector('#sec1').offsetTop )
+            // console.log ( document.querySelector('#sec1').clientHeight )
+            // console.log ( document.querySelector('#sec1').scrollHeight )
+            // console.log ( '#sec2 h300 m50 p50 b2' )
+            // console.log ( document.querySelector('#sec2').offsetHeight + ' - offsetHeight' )
+            // console.log ( document.querySelector('#sec2').offsetTop    + ' - offsetTop')
+            // console.log ( document.querySelector('#sec2').clientHeight + ' - clientHeight' )
+            // console.log ( document.querySelector('#sec2').scrollHeight + ' - scrollHeight' )
+            // console.log ( '#sec3 h400 m0 p50 b2' )
+            // console.log ( document.querySelector('#sec3').offsetHeight )
+            // console.log ( document.querySelector('#sec3').offsetTop )
+            // console.log ( document.querySelector('#sec3').clientHeight )
+            // console.log ( document.querySelector('#sec3').scrollHeight )
+            // console.log ( '#sec4 h500 m0 p50 b0' )
+            // console.log ( document.querySelector('#sec4').offsetHeight )
+            // console.log ( document.querySelector('#sec4').offsetTop )
+            // console.log ( document.querySelector('#sec4').clientHeight )
+            // console.log ( document.querySelector('#sec4').scrollHeight )
+            // console.log ( '#sec5 h600 m0 p 0 b 0' )
+            // console.log ( document.querySelector('#sec5').offsetHeight )
+            // console.log ( document.querySelector('#sec5').offsetTop )
+            // console.log ( document.querySelector('#sec5').clientHeight )
+            // console.log ( document.querySelector('#sec5').scrollHeight )
+        
+            const HeaderYTop =  document.querySelector('#header').clientHeight;
+            const winY = window.pageYOffset;
+
+            console.log(HeaderYTop, winY);
+
+            if (HeaderYTop >= winY ) {
+                
+                document.getElementById('header').style.visibility = 'visible';
+            } else{
+                document.getElementById('header').style.visibility = 'hidden';
+            }
+
         };
+
+        
 
 
 
