@@ -1,3 +1,4 @@
+/* 기본값 초기화 */
 html {
 	font-family: 'Noto Sans KR', sans-serif;
 }
@@ -11,6 +12,41 @@ a {
 	color: royalblue;
 }
 img {
-	max-width: 100%;
+	max-width: 100%;/* 이미지는 반응형 되게 끔 % */
 	height: auto;
+}
+/* //기본값 초기화 */
+.global-width {
+	max-width: 620px; /* 테스트 너비 설정 */
+	margin: 0 auto;   /* 중간 정렬 */
+	padding: 0 16px;  /* 1rem = 16px 최소 간격 */
+}
+.scroll-graphic{ /* 이미지 전체 */
+	position: sticky;	/* 화면 위에 달라붙게 하기 */
+	top: 0;
+	height: 100%;
+}
+.graphic-item{ /* 각 이미지 */
+	position: absolute; /* 이미지 한 곳에 모으기 */
+	left: 0;
+	top: 0;
+	display: flex; /* 가운데 정렬하기 위함 */
+	align-items: center;
+	justify-content: center;
+	width: 100%; /* 화면 꽉차게 */
+	/* height: 100%; */
+}
+.scene-img{/* 이미지 자체 설정 */
+	max-height: 100vh;/* 높이 조정 */
+}
+.scroll-text{ /* 말풍선 전체 */
+	position: relative; /* 맨 위로 올림 기본값 static일때, 아닐 경우 z-index값을 조절 */
+
+}
+.step { /* 각각의 말풍선  */
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
+	padding: 0.5rem 1rem;
+	border-radius: 10px;
+	margin-bottom: 60vh;
 }
