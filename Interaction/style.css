@@ -35,6 +35,11 @@ img {
 	justify-content: center;
 	width: 100%; /* 화면 꽉차게 */
 	/* height: 100%; */
+	opacity: 0; /* visible붙은것만 1 */
+	transition: 0.5s;
+}
+.visible{
+	opacity: 1;
 }
 .scene-img{/* 이미지 자체 설정 */
 	max-height: 100vh;/* 높이 조정 */
