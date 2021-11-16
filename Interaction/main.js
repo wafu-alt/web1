@@ -3,6 +3,22 @@
 
 (() => {
     //객체로 가져오기
+  //새 애니메이션을 위한 새 함수 받아오기
+    const actions = {
+      birdFlies(key){
+        if (key) {
+          //부모인자를 활용한 셀렉트
+          document.querySelector('[data-index="2"] .bird').style.transform = 
+          'translateX(${window.innerWidth}px)'; //윈도우만큼 이동
+        } else {
+          document.querySelector('[data-index="2"] .bird').style.transform = 
+          'translateX(-100%)'; //윈도우만큼 이동
+        }
+        
+      }
+    }
+
+
     const stepElems = document.querySelectorAll('.step');
     const graphicElems = document.querySelectorAll('.graphic-item');
     // 현재 활성화된 visible 클래스 .graphic-item을 지정
@@ -12,7 +28,7 @@
 
     const io = new IntersectionObserver((entries, observer) => {
       ioIndex = entries[0].target.dataset.index * 1;
-      console.log(ioIndex);
+      
       //entries[0]인 이유는 이전에 array에서 0이 나왔기 때문(1밖에 출력이 안됬음)
     });
 
@@ -23,12 +39,18 @@
       graphicElems[i].dataset.index = i;
     }
 
-    function activate(){
-      curruntItem.classList.add('visible');
+    function activate(action){
+      curruntItem.classList.add('visible'); //객체 호출
+      if (action) {
+        actions[action](true); //객체 호출
+      }
     }
 
-    function inactivate(){
+    function inactivate(action){
       curruntItem.classList.remove('visible');
+      if (action) {
+        actions[action](false);
+      }
     }
 
     activate();
@@ -63,7 +85,7 @@
                     
                     inactivate(); 
                     curruntItem =  graphicElems[step.dataset.index];
-                    activate();
+                    activate(curruntItem.dataset.action);
             }
         }
 

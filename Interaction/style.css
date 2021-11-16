@@ -60,4 +60,6 @@ img {
 	left: 0;
 	bottom: 70%;
 	width: 100px;
+	transform: translateX(-100%);
+	transition: 1.5s 0.5s linear;
 }
