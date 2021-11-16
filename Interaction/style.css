@@ -55,3 +55,9 @@ img {
 	border-radius: 10px;
 	margin-bottom: 60vh;
 }
+.bird { /* 새위치 잡기 */
+	position: absolute;
+	left: 0;
+	bottom: 70%;
+	width: 100px;
+}
