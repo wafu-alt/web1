@@ -55,7 +55,7 @@ img {
 	background: rgba(255, 255, 255, 0.8);
 	box-shadow: rgba(0, 0, 0, 0.3) 0 0 3px;
 	padding: 0.5rem 1rem;
-	border-radius: 10px;
+	border-radius: 10px;  
 	margin-bottom: 60vh;
 }
 .bird { /* 새위치 잡기 */
@@ -74,4 +74,7 @@ img {
 .global-footer {
 	padding: 2rem 0;
 	text-align: center;
+}
+.strikethrough {/* 취소선 */
+	text-decoration: line-through;
 }
