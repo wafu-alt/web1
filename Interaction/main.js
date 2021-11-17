@@ -9,13 +9,23 @@
         if (key) {
           //부모인자를 활용한 셀렉트
           document.querySelector('[data-index="2"] .bird').style.transform = 
-          'translateX(${window.innerWidth}px)'; //윈도우만큼 이동
+          `translateX(${window.innerWidth}px)`; //윈도우만큼 이동
         } else {
           document.querySelector('[data-index="2"] .bird').style.transform = 
-          'translateX(-100%)'; //윈도우만큼 이동
+          `translateX(-100%)`; //윈도우만큼 이동
         }
-        
+      },
+
+      birdFlies2(key){
+        if (key) {
+          document.querySelector('[data-index="5"] .bird').style.transform = 
+          `translate(${window.innerWidth}px, ${-window.innerHeight * 0.7}px)`; //윈도우만큼 이동
+        } else {
+          document.querySelector('[data-index="5"] .bird').style.transform = 
+          `translateX(-100%)`; //윈도우만큼 이동
+        }
       }
+
     }
 
 
